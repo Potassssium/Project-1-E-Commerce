@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-1: #ffffff;
+    --color-2: #f55a5a;
+    --font-color: #434343;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Darker Grotesque', sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+
+}
+a {
+    text-decoration: none;
+    color: var(--font-color)
+}
+p {
+    color: var(--font-color);
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    
+}
+.btn {
+    display: inline-block;
+    background: var(--color-2);
+    color: var(--color-1);
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: var(--font-color);
+}
+.header {
+    background: var(--color-1);
+}
+
+.header .row {
+    margin-top: 70px;
+}
