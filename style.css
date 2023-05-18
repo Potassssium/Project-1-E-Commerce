@@ -3,7 +3,11 @@
 :root {
     --color-1: #ffffff;
     --color-2: #f55a5a;
+    --color-3: #ebebeb;
     --font-color: #434343;
+    --small: 1.125rem;
+    --medium: 1.5rem;
+    --large: 2.25rem;
 }
 
 *{
@@ -18,7 +22,10 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 80%;
+
 
 }
 nav {
@@ -45,10 +52,9 @@ p {
 }
 
 .container {
-    max-width: 1300px;
+    width: 80%;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    height: 100vh;
     
 }
 .row {
@@ -91,4 +97,252 @@ p {
 
 .header .row {
     margin-top: 70px;
+}
+.categories {
+    margin: 70px 0;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+
+}
+
+.small-container {
+    width: 60%;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+
+}
+.col-4 img {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: var(--font-color);
+}
+
+.title::after {
+    content: '';
+    background: var(--color-2);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4 {
+    color: var(--font-color);
+    font-weight: normal;
+    font-size: 20px;
+
+}
+.col-4 p {
+    font-size: 22px;
+    font-weight: 400;
+
+}
+.rating .fa {
+    color: var(--color-2);
+}
+.col-4:hover {
+    transform: translateY(-5px);
+
+}
+
+/* -------offer -------- */
+
+
+
+.offer  {
+    background: var(--color-3);
+    margin-top: 80px;
+    padding: 20px 0;
+}
+.col-2 .offer-img {
+    padding: 50px;
+}
+
+small {
+    font-size: 20px;
+}
+
+/* testimonial */
+
+.testimonial {
+    padding-top: 100px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgb(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left {
+    font-size: 34px;
+    color: var(--color-2);
+}
+.col-3 p{
+    font-size: 18px;
+    margin: 12px 0;
+    color: var(--font-color);
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 600;
+    color: var(--font-color);
+    font-size: 16px;
+
+}
+
+/* brands */
+
+.brands {
+    margin: 100px auto;
+}
+.col-5 {
+    width: 160px;
+}
+.col-5 img {
+    width: 100%;
+    cursor:pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover {
+    filter: grayscale(0);
+    transition: all .5s ease;
+}
+/* footer */
+
+.footer {
+    background: var(--font-color);
+    color: var(--color-1);
+    font-size: 16px;
+    padding: 60px 0;
+
+}
+.footer p {
+    color: var(--color-1);
+    font-size: 18px;
+
+}
+.footer h3 {
+    color: var(--color-1);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 40px;
+}
+.footer-col-1 {
+    flex-basis:32%;
+}
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+
+}
+.footer-col-3, .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+.app-logo img {
+    width: 140px;
+}
+.footer hr {
+    border: n;
+    background: var(--color-3);
+    height: 1px;
+    margin: 30px 0;
+}
+.copyright {
+    text-align: center;
+
+}
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* -------media query for menu ------ */
+
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--font-color);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a {
+        color: var(--color-1);
+
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* -------media query for less than 600 screen size ------ */
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
 }
